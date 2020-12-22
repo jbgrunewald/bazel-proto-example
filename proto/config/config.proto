@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package config;
+
+option go_package = "github.com/jbgrunewald/bazel-proto-example/proto/config";
+
+enum ConfigType {
+  unknown = 0;
+  major = 1;
+  minor = 2;
+}
+message Config {
+  string id = 1;
+  ConfigType type = 2;
+}
